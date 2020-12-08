@@ -11,9 +11,9 @@
             <div class="card">
                 <div class="card-body">
                     <h1>Create Account</h1>
-                    <form action="{% url 'createt' %}" method="post" novalidate>
+                    <form action="{% url 'account' %}" method="post" novalidate>
                         {% csrf_token %}
-                        {{ form.as_p }}
+                            {{form}}
                         <button type="submit" class="btn btn-outline-primary">Create</button>
                     </form>
                 </div>

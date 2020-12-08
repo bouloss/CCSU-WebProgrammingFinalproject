@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="row m-1">
+    <div class="col-4">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src='{% static 'images/bootstrap.png' %}' alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Bootstrap</h5>
+                <p class="card-text">Open-source CSS framework directed at responsive web development</p>
+                <a href="https://getbootstrap.com/docs/4.5/getting-started/introduction/" class="btn btn-primary">Go to Bootstrap</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="{% static 'images/w3school.png' %}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">w3school</h5>
+                <p class="card-text">A free tutorial site to help teach HTML, CSS, Bootstrap, Javascript, and jQuery.</p>
+                <a href="https://www.w3schools.com/" class="btn btn-primary">Go to w3Schools</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="{% static 'images/brackets.png' %}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Brackets</h5>
+                <p class="card-text">A source code editor for web development, that is completely free.       </p>
+                <a href="http://brackets.io/" class="btn btn-primary">Go to Brackets</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row m-1">
+    <div class="col-4">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="{% static 'images/github.png' %}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">GitHub</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://github.com/" class="btn btn-primary">Go to Github</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="{% static 'images/pycharm.png' %}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Pycharm</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://www.jetbrains.com/pycharm/" class="btn btn-primary">Go to Pycharm</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="{% static 'images/eclipse.png' %}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Eclipse</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://www.eclipse.org/downloads/" class="btn btn-primary">Go to Eclipse</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
