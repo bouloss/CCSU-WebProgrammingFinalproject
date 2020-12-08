@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Create Account
+{% endblock %}
+
+{% block body %}
+
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Create Account</h1>
+                    <form action="{% url 'createt' %}" method="post" novalidate>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-outline-primary">Create</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
