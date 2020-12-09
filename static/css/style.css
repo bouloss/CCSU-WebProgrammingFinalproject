@@ -1,0 +1,40 @@
+
+#logo{
+    width: 70%;
+
+}
+.jumbotron{
+    color: #1A4784;
+    border-bottom: 10px solid #1A4784;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+    background-color: aliceblue!important;
+}
+.main{
+    border: 5px #1A4784 solid;
+    border-radius: 1%;
+
+}
+.info{
+    height: 550px;
+
+    border: 4px #1A4784 solid;
+    margin-left: 1em;
+    border-radius: 5%;
+}
+.container{
+    padding: 10px;
+
+}
+.card-img-top{
+    width: 150px;
+    height: auto;
+}
+.btn{
+    display: block;
+}
+.type{
+    font-family: 'Titillium Web', sans-serif;
+}
+

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <title>CS Forums</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    {% block title %}
+    {% endblock %}
 </head>
 
 <body>
@@ -16,7 +19,7 @@
                     <img src="{% static 'images/ccsu.png' %}" alt="logo" id="logo">
                 </div>
                 <div class="col">
-                    <h1 class="display-4 ">CCSU Web Forums</h1>
+                    <h1 class="display-4 type">CCSU CS Forums</h1>
                 </div>
             </div>
         </div>
@@ -24,28 +27,65 @@
 
         <div class="row m-5">
             <div class="col-9 align-self-start main">
-            <h4>Question Forums</h4>
                 {% block body %}
                 {% endblock %}
             </div>
-            <div class="col-2 align-self-center info">
+            <div class="col-2 align-self-start info">
                 <div class="row justify-content-center">
-                     <a class="btn btn-primary m-2" href="{% url 'final' %}" role="button" style="background-color: #1A4784">Home</a>
+                     <a class="btn btn-primary m-2" href="{% url 'final' %}" role="button" style="background-color: #1A4784; width:100%">Home</a>
                 </div>
                 <div class="row justify-content-center">
-                <a class="btn btn-primary m-2" href="{% url 'resource' %}" role="button" style="background-color: #1A4784">Resources</a>
+                    <a class="btn btn-primary m-2" href="{% url 'resource' %}" role="button" style="background-color: #1A4784; width:100%">Resources</a>
                 </div>
                 {% if user.is_authenticated %}
+                    <div class="container border solid">
+                    <div class="row justify-content-center">
+                        <svg width="1.5em" height="3em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                    </div>
                     <div class="row justify-content-center">
                         User : {{user.username}}
                     </div>
-                    <a class="btn btn-primary m-2" href="{% url 'logout' %}" role="button" style="background-color: #1A4784">Logout</a>
+                    </div>
+                    <div class="row justify-content-center">
+                    <a class="btn btn-primary m-2" href="{% url 'logout' %}" role="button" style="background-color: #1A4784; width:100%">Logout</a>
+                    </div>
                 {% else %}
-                    <a class="btn btn-primary m-2" href="{% url 'login' %}" role="button" style="background-color: #1A4784">Login</a>
-                    <a class="btn btn-primary m-2" href="{% url 'account' %}" role="button" style="background-color: #1A4784">Create Account</a>
+                    <div class="row justify-content-center">
+                    <a class="btn btn-primary m-2" href="{% url 'login' %}" role="button" style="background-color: #1A4784; width:100%">Login</a>
+                    <a class="btn btn-primary m-2" href="{% url 'account' %}" role="button" style="background-color: #1A4784; width:100%">Create Account</a>
+                    </div>
                 {% endif %}
+                <img src="{% static 'images/campus.jpg' %}" alt="campus" class="img-thumbnail">
+                <p class="type">CCSU Forums are here to help the students by being a central location for questions and resources.</p>
+                <div class="row justify-content-center align-content-end">
+                   <a class="btn btn-primary m-2" href="https://www2.ccsu.edu/" role="button" style="background-color: #1A4784; width:100%;">CCSU</a>
+                </div>
             </div>
         </div>
+        <hr>
+    <footer class="footer mt-auto">
+        <div class="container">
+             <div class="row">
+                <div class="col-sm-3">
+                    <h1 class="type">Contact</h1>
+                </div>
+                <div class="col-sm-3">
+                    <p class="type">Chad Williams<br>
+                    Professor, Department Chair<br>(860) 832-2719 </p>
+                </div>
+                <div class="col-sm-3">
+                    <p class="type">Neva Deutsch<br>
+                    Administrative Assistant<br>(860) 832-2710 </p>
+                </div>
+                 <div class="col-sm-3">
+                     <p class="type">Yusuf Albayram<br>
+                    Professor<br>(860) 832-2715 </p>
+                 </div>
+             </div>
+        </div>
+    </footer>
 
 </body>
 </html>
